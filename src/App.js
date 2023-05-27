@@ -61,10 +61,12 @@ function App(props) {
         if (score > 0) {
           setScore((score) => score - 10);
         }
-        if (timeOut) clearTimeout(timeOut);
-        timeOut = setTimeout(() => {
-          setStoreData(updateData);
-        }, 400);
+        if (updateData) {
+          if (timeOut) clearTimeout(timeOut);
+          timeOut = setTimeout(() => {
+            setStoreData(updateData);
+          }, 400);
+        }
       } else {
         setScore((score) => score + 10);
       }
@@ -74,7 +76,6 @@ function App(props) {
   };
 
   const handleImage = (checkImage) => {
-    console.log("checkImage", checkImage);
     const updateData = storeData.map((item) => {
       if (item.id === checkImage.id) {
         return {
@@ -84,9 +85,10 @@ function App(props) {
       }
       return item;
     });
-    setStoreData(updateData);
-
-    forImageCheck(checkImage);
+    if (updateData) {
+      setStoreData(updateData);
+      forImageCheck(checkImage);
+    }
   };
 
   const resetGame = () => {
