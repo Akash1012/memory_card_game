@@ -13,7 +13,7 @@ function App(props) {
   const [score, setScore] = useState(0);
   const [gameOver, setGameOver] = useState(false);
   const [startStop, setStartStop] = useState(false);
-  const [storeData, setStoreData] = useState(DATA);
+  const [storeData, setStoreData] = useState([]);
   const modalContainer = useRef();
 
   useEffect(() => {
@@ -138,7 +138,7 @@ function App(props) {
       )}
       <nav className="nav_bar">
         <div>Timer - {timer}</div>
-        <div>Magic Cards</div>
+        <div>Magic Cards XXX</div>
       </nav>
       <div className="modalContainer" ref={modalContainer}>
         <div className="modal">
