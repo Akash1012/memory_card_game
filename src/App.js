@@ -24,9 +24,9 @@ function App(props) {
       }, 1500);
 
       if (timer === 0) {
-        clearInterval(interval);
         setStartStop(!startStop);
         setGameOver(!gameOver);
+        clearInterval(interval);
       }
     }
 
@@ -34,7 +34,7 @@ function App(props) {
       clearInterval(interval);
       clearTimeout(timeOut);
     };
-  }, [timer, startStop]);
+  }, [timer, startStop, gameOver]);
 
   const gameStart = () => {
     modalContainer.current.style.display = "none";
@@ -62,12 +62,9 @@ function App(props) {
         if (score > 0) {
           setScore((score) => score - 10);
         }
-        if (updateData) {
-          if (timeOut) clearTimeout(timeOut);
-          timeOut = setTimeout(() => {
-            setStoreData(updateData);
-          }, 400);
-        }
+        setTimeout(() => {
+          setStoreData(updateData);
+        }, 500);
       } else {
         setScore((score) => score + 10);
       }
@@ -138,7 +135,7 @@ function App(props) {
       )}
       <nav className="nav_bar">
         <div>Timer - {timer}</div>
-        <div>Magic Cards XXX</div>
+        <div>Magic Cards</div>
       </nav>
       <div className="modalContainer" ref={modalContainer}>
         <div className="modal">
