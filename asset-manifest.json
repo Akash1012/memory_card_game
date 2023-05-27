@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/Akash1012/memory_card_game/static/css/main.bba3a12a.css",
+    "main.js": "/Akash1012/memory_card_game/static/js/main.67a6690e.js",
+    "static/js/787.6b390ee9.chunk.js": "/Akash1012/memory_card_game/static/js/787.6b390ee9.chunk.js",
+    "static/media/Nami.png": "/Akash1012/memory_card_game/static/media/Nami.ad3fc635fa54a9517046.png",
+    "static/media/Luffy.png": "/Akash1012/memory_card_game/static/media/Luffy.60eec791391ea88d4d4b.png",
+    "static/media/brooks.png": "/Akash1012/memory_card_game/static/media/brooks.b1f1ac81252deddaa310.png",
+    "static/media/zorro.png": "/Akash1012/memory_card_game/static/media/zorro.5e1b0ebce8f1cef966e1.png",
+    "static/media/Sanji.png": "/Akash1012/memory_card_game/static/media/Sanji.fed3c680cb6934f3acb8.png",
+    "static/media/Usopp.png": "/Akash1012/memory_card_game/static/media/Usopp.9f0f12528e9953c8b8f4.png",
+    "static/media/onepiece.png": "/Akash1012/memory_card_game/static/media/onepiece.844321ee5e0c93d69350.png",
+    "index.html": "/Akash1012/memory_card_game/index.html",
+    "main.bba3a12a.css.map": "/Akash1012/memory_card_game/static/css/main.bba3a12a.css.map",
+    "main.67a6690e.js.map": "/Akash1012/memory_card_game/static/js/main.67a6690e.js.map",
+    "787.6b390ee9.chunk.js.map": "/Akash1012/memory_card_game/static/js/787.6b390ee9.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.bba3a12a.css",
+    "static/js/main.67a6690e.js"
+  ]
+}
