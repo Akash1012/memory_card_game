@@ -41,6 +41,7 @@ function App(props) {
   };
 
   const forImageCheck = (image) => {
+    let timeOut;
     saveOpenImageName.push(image.name);
     if (saveOpenImageName.length === 2) {
       let allEqual = saveOpenImageName.every(
@@ -60,7 +61,10 @@ function App(props) {
         if (score > 0) {
           setScore((score) => score - 10);
         }
-        setStoreData(updateData);
+        if (timeOut) clearTimeout(timeOut);
+        timeOut = setTimeout(() => {
+          setStoreData(updateData);
+        }, 400);
       } else {
         setScore((score) => score + 10);
       }
@@ -80,9 +84,8 @@ function App(props) {
       return item;
     });
     setStoreData(updateData);
-    setTimeout(() => {
-      forImageCheck(checkImage);
-    }, 800);
+
+    forImageCheck(checkImage);
   };
 
   const resetGame = () => {
