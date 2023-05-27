@@ -82,12 +82,12 @@ function App(props) {
     setStoreData(updateData);
     setTimeout(() => {
       forImageCheck(checkImage);
-    }, 300);
+    }, 400);
   };
 
   const resetGame = () => {
     setStoreData([]);
-    setTimer(50);
+    setTimer(35);
     setGameOver(false);
     modalContainer.current.style.display = "flex";
   };
