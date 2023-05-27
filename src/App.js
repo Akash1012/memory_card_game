@@ -74,6 +74,7 @@ function App(props) {
   };
 
   const handleImage = (checkImage) => {
+    console.log("checkImage", checkImage);
     const updateData = storeData.map((item) => {
       if (item.id === checkImage.id) {
         return {
