@@ -149,7 +149,7 @@ function App(props) {
             <div
               className="card_child"
               key={index}
-              onClick={() => handleImage(item)}
+              onClick={() => (item.open ? "() =>{}" : handleImage(item))}
             >
               <p className="name">{item.name}</p>
               {item.open ? (
