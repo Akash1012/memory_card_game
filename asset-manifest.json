@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/memory_card_game/static/css/main.7fab1c2d.css",
-    "main.js": "/memory_card_game/static/js/main.95214509.js",
+    "main.js": "/memory_card_game/static/js/main.7ccb0eae.js",
     "static/js/787.6b390ee9.chunk.js": "/memory_card_game/static/js/787.6b390ee9.chunk.js",
     "static/media/Nami.png": "/memory_card_game/static/media/Nami.ad3fc635fa54a9517046.png",
     "static/media/Luffy.png": "/memory_card_game/static/media/Luffy.60eec791391ea88d4d4b.png",
@@ -12,11 +12,11 @@
     "static/media/onepiece.png": "/memory_card_game/static/media/onepiece.844321ee5e0c93d69350.png",
     "index.html": "/memory_card_game/index.html",
     "main.7fab1c2d.css.map": "/memory_card_game/static/css/main.7fab1c2d.css.map",
-    "main.95214509.js.map": "/memory_card_game/static/js/main.95214509.js.map",
+    "main.7ccb0eae.js.map": "/memory_card_game/static/js/main.7ccb0eae.js.map",
     "787.6b390ee9.chunk.js.map": "/memory_card_game/static/js/787.6b390ee9.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.7fab1c2d.css",
-    "static/js/main.95214509.js"
+    "static/js/main.7ccb0eae.js"
   ]
 }
