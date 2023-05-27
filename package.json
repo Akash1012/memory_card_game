@@ -1,7 +1,7 @@
 {
   "name": "card_game",
   "version": "0.1.0",
-  "homepage": "http://github.com/Akash1012/memory_card_game",
+  "homepage": "http://Akash1012.github.io/memory_card_game",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
