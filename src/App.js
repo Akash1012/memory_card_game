@@ -82,7 +82,7 @@ function App(props) {
     setStoreData(updateData);
     setTimeout(() => {
       forImageCheck(checkImage);
-    }, 400);
+    }, 800);
   };
 
   const resetGame = () => {
