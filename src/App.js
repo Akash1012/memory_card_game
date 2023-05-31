@@ -4,7 +4,6 @@ import ReactDOM from "react-dom";
 import DATA from "./data";
 
 let saveOpenImageName = [];
-let timeOut;
 const Backdrop = () => {
   return <div className="backdrop" />;
 };
@@ -21,7 +20,7 @@ function App(props) {
     if (startStop) {
       interval = setInterval(() => {
         setTimer((prevTimer) => prevTimer - 1);
-      }, 1500);
+      }, 1000);
 
       if (timer === 0) {
         setStartStop(!startStop);
@@ -32,7 +31,6 @@ function App(props) {
 
     return () => {
       clearInterval(interval);
-      clearTimeout(timeOut);
     };
   }, [timer, startStop, gameOver]);
 
@@ -45,6 +43,7 @@ function App(props) {
   const forImageCheck = (image) => {
     saveOpenImageName.push(image.name);
     if (saveOpenImageName.length === 2) {
+      clearTimeout(timer);
       let allEqual = saveOpenImageName.every(
         (val) => val === saveOpenImageName[0]
       );
@@ -62,7 +61,8 @@ function App(props) {
         if (score > 0) {
           setScore((score) => score - 10);
         }
-        setTimeout(() => {
+        let timer;
+        timer = setTimeout(() => {
           setStoreData(updateData);
         }, 500);
       } else {
