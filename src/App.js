@@ -18,14 +18,14 @@ function App(props) {
   useEffect(() => {
     let interval;
     if (startStop) {
-      interval = setInterval(() => {
-        setTimer((prevTimer) => prevTimer - 1);
-      }, 1000);
+      // interval = setInterval(() => {
+      //   setTimer((prevTimer) => prevTimer - 1);
+      // }, 1000);
 
       if (timer === 0) {
         setStartStop(!startStop);
         setGameOver(!gameOver);
-        clearInterval(interval);
+        // clearInterval(interval);
       }
     }
 
@@ -134,7 +134,7 @@ function App(props) {
         </>
       )}
       <nav className="nav_bar">
-        <div>Timer - {timer}</div>
+        {/* <div>Timer - {timer}</div> */}
         <div>Magic Cards</div>
       </nav>
       <div className="modalContainer" ref={modalContainer}>
