@@ -8,7 +8,7 @@ const Backdrop = () => {
   return <div className="backdrop" />;
 };
 function App(props) {
-  const [timer, setTimer] = useState(35);
+  const [timer, setTimer] = useState(20);
   const [score, setScore] = useState(0);
   const [gameOver, setGameOver] = useState(false);
   const [startStop, setStartStop] = useState(false);
@@ -16,16 +16,27 @@ function App(props) {
   const modalContainer = useRef();
 
   useEffect(() => {
+    let timer;
+    timer = setTimeout(() => {
+      setStoreData(DATA);
+    }, 4000);
+
+    return () => {
+      clearTimeout(timer);
+    };
+  }, []);
+
+  useEffect(() => {
     let interval;
     if (startStop) {
-      // interval = setInterval(() => {
-      //   setTimer((prevTimer) => prevTimer - 1);
-      // }, 1000);
+      interval = setInterval(() => {
+        setTimer((prevTimer) => prevTimer - 1);
+      }, 1000);
 
       if (timer === 0) {
         setStartStop(!startStop);
         setGameOver(!gameOver);
-        // clearInterval(interval);
+        clearInterval(interval);
       }
     }
 
@@ -37,7 +48,15 @@ function App(props) {
   const gameStart = () => {
     modalContainer.current.style.display = "none";
     setStartStop(!startStop);
-    setStoreData(DATA);
+    const temp = DATA?.map((item) => {
+      return {
+        ...item,
+        open: true,
+      };
+    });
+    setStoreData(temp);
+
+    // setStoreData(DATA);
   };
 
   const forImageCheck = (image) => {
@@ -134,7 +153,7 @@ function App(props) {
         </>
       )}
       <nav className="nav_bar">
-        {/* <div>Timer - {timer}</div> */}
+        <div>Timer - {timer}</div>
         <div>Magic Cards</div>
       </nav>
       <div className="modalContainer" ref={modalContainer}>
